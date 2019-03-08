@@ -2,6 +2,7 @@
 ---
 
 <!doctype html>
+
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -18,17 +19,19 @@
           <p class="HeaderBrandLogo">
             <img src="https://elveotie.github.io/images/gouvernement/cee.svg" alt="Logo de la CEE" />
           </p>
+
           <h1 class="HeaderBrandText">
-            Chambre des Entreprises d'Elvéotie <br>
+            Chambre des Entreprises Elvéotiques <br>
             <span>Dynamiser le Royaume</span>
           </h1>
         </div>
-        
+
         {% include header-nav.html %}
       </header>
 
       <div class="Page">
         <main class="PageMain">
+          <h2 class="PageTitle">{{ page.title }}</h2>
           {{ content }}
         </main>
       </div>

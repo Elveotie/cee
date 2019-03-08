@@ -73,6 +73,7 @@ h6 {
 
 .HeaderBrandText {
   font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .HeaderBrandText span {
@@ -126,7 +127,15 @@ h6 {
   flex-grow: 1;
 }
 
-.PageTitle + * {
+.PageMain > *:first-child {
+  margin-top: 0;
+}
+
+.PageMain > *:last-child {
+  margin-bottom: 0;
+}
+
+.PageTitle + p {
   margin-top: 0;
 }
 
