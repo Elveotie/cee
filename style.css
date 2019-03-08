@@ -6,7 +6,7 @@
 
 body {
   background: white;
-  font: 1rem/normal Roboto, arial, sans-serif;
+  font: 1rem/1.5 Roboto, arial, sans-serif;
   margin: 0;
 }
 
@@ -49,9 +49,9 @@ h6 {
 
 .MainContainer {
   background: white;
-  box-shadow: 0 0 2em rgba(0,0,0,.25);
-  margin: 2em auto;
-  max-width: 800px;
+  box-shadow: 0 0 1rem rgba(0,0,0,.25);
+  margin: 2rem auto;
+  width: 800px;
 }
 
 .HeaderBrand {
@@ -125,14 +125,6 @@ h6 {
 
 .PageMain {
   flex-grow: 1;
-}
-
-.PageMain > *:first-child {
-  margin-top: 0;
-}
-
-.PageMain > *:last-child {
-  margin-bottom: 0;
 }
 
 .PageTitle + p {
