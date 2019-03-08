@@ -7,6 +7,11 @@
   color: inherit;
   text-decoration: none;
   outline: none;
+
+  &:hover, &:focus, &:active {
+    background: none;
+    color: inherit;
+  }
 }
 
 /* BASE */
@@ -23,11 +28,12 @@ body {
 
 // Links
 
-a { color: #00b5b4; }
+a { color: #00b5b4;
 
-a:hover, a:focus, a:active {
-  background-color: #00b5b4;
-  color: white;
+  &:hover, &:focus, &:active {
+    background: #00b5b4;
+    color: white;
+  }
 }
 
 // Headings
@@ -109,10 +115,8 @@ h6 { font-size: 1rem; }
   border-right: 1px solid silver;
   font-family: 'Work Sans', sans-serif;
   padding: 1em;
-}
 
-.HeaderNav li:hover {
-  background: #eaeaea;
+  &:hover { background: #eaeaea; }
 }
 
 .HeaderNav a { @extend %reset-link; }
