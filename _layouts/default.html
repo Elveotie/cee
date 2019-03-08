@@ -8,7 +8,7 @@
     <title>CEE - {{ page.title }}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" />
-    <link rel="stylesheet" href="{{ "style.css" | relative_url }}" />
+    <link rel="stylesheet" href="{{ 'style.css' | relative_url }}" />
   </head>
   
   <body>
@@ -23,22 +23,14 @@
             <span>Dynamiser le Royaume</span>
           </h1>
         </div>
-
-        <nav class="HeaderNav">
-          {% include header-nav.html %}
-        </nav>
+        
+        {% include header-nav.html %}
       </header>
 
       <div class="Page">
         <main class="PageMain">
           {{ content }}
         </main>
-
-        <!--
-        <aside class="PageAside">
-          {% include page-aside.html %}
-        </aside>
-        -->
       </div>
 
       <footer class="Footer">
