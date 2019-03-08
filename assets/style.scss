@@ -1,12 +1,16 @@
 ---
 ---
 
+/* VARIABLES */
+
+$blue: #00b5b4;
+
 /* SNIPPETS */
 
 %reset-link {
+  background: initial;
   color: inherit;
   text-decoration: none;
-  outline: none;
 }
 
 /* BASE */
@@ -14,17 +18,18 @@
 :root { font-size: 13px; }
 
 body {
-  background: white;
+  background: white url(quilt.png);
   font: 1rem/1.5 Roboto, arial, sans-serif;
   margin: 0;
 }
 
 // Links
 
-a { color: #00b5b4;
+a {
+  &:link, &:visited { color: $blue; }
 
   &:hover, &:focus, &:active {
-    background: #00b5b4;
+    background: $blue;
     color: white;
   }
 }
@@ -68,15 +73,19 @@ h6 { font-size: 1rem; }
   padding: 1em;
 }
 
-.HeaderBrandLogo,
-.HeaderBrandText { margin: 0; }
+.HeaderBrandLogo, .HeaderBrandText { margin: 0; }
 
 .HeaderBrandLogo img {
   height: 50px;
   margin-right: 1em;
 }
 
-.HeaderBrandLink { @extend %reset-link; }
+.HeaderBrandLink {
+  &:link, &:visited { @extend %reset-link; }
+  &:hover, &:focus, &:active {
+    .HeaderBrandText span { color: inherit; }
+  }
+}
 
 .HeaderBrandText {
   font-size: 1.5rem;
@@ -108,11 +117,11 @@ h6 { font-size: 1rem; }
   border-right: 1px solid silver;
   font-family: 'Work Sans', sans-serif;
   padding: 1em;
-
-  &:hover { background: #eaeaea; }
 }
 
-.HeaderNav a { @extend %reset-link; }
+.HeaderNav a { 
+  &:link, &:visited { @extend %reset-link; }
+}
 
 // Page
 
@@ -121,8 +130,7 @@ h6 { font-size: 1rem; }
   display: flex;
 }
 
-.PageMain,
-.PageAside { padding: 1em; }
+.PageMain, .PageAside { padding: 1em; }
 
 .PageMain { flex-grow: 1; }
 
