@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>CEE - {{ page.title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" />
+    <link rel="stylesheet" href="{{ "style.css" | relative_url }}" />
+  </head>
+  
+  <body>
+    <div class="MainContainer">
+      <header class="Header">
+        <div class="HeaderBrand">
+          <p class="HeaderBrandLogo">
+            <img src="https://elveotie.github.io/images/gouvernement/cee.png" alt="Logo de la CEE" />
+          </p>
+          <h1 class="HeaderBrandText">
+            Centrale des Entreprises d'Elvéotie <br>
+            <span>Dynamiser le Royaume</span>
+          </h1>
+        </div>
+
+        <nav class="HeaderNav">
+          {% include liste-navigation.html %}
+        </nav>
+      </header>
+
+      <div class="Page">
+        <main class="PageMain">
+          {{ content }}
+        </main>
+
+        <aside class="PageAside">
+          {% include page-aside.html %}
+        </aside>
+      </div>
+
+      <footer class="Footer">
+        <p>&copy; Centrale des Entreprises Elvéotiques, 2019</p>
+        {% include footer-links.html %}
+      </footer>
+    </div>
+  </body>
+</html>
